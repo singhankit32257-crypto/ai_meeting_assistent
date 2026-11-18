@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#080b18">
+
+    <meta name="description" content="MeetMind AI - Turn Meetings into Action. Manage meetings, tasks, decisions and productivity in one intelligent workspace.">
+
+    <title>MeetMind AI | Turn Meetings into Action</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="app">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">〽️</div>
+
+                <div>
+                    <h2>MeetMind <span>AI</span></h2>
+                    <small>MEETING INTELLIGENCE</small>
+                </div>
+
+                <button class="mobile-close" id="closeSidebar">✕</button>
+            </div>
+
+            <div class="workspace">
+                <div class="workspace-avatar">S</div>
+                <div>
+                    <strong>Personal Workspace</strong>
+                    <small>Free Plan</small>
+                </div>
+            </div>
+
+            <nav class="navigation">
+
+                <p class="nav-label">WORKSPACE</p>
+
+                <button class="nav-item active" data-page="overview">
+                    <span>▦</span> Overview
+                </button>
+
+                <button class="nav-item" data-page="meetings">
+                    <span>▣</span> My Meetings
+                </button>
+
+                <button class="nav-item" data-page="upload">
+                    <span>⇧</span> Upload Meeting
+                </button>
+
+                <button class="nav-item" data-page="tasks">
+                    <span>☑️</span> Tasks & Actions
+                    <span class="nav-count" id="taskCount">0</span>
+                </button>
+
+                <button class="nav-item" data-page="decisions">
+                    <span>✧</span> Decisions
+                </button>
+
+                <p class="nav-label">INTELLIGENCE</p>
+
+                <button class="nav-item" data-page="assistant">
+                    <span>✦</span> AI Assistant
+                </button>
+
+                <button class="nav-item" data-page="reports">
+                    <span>▤</span> Reports
+                </button>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <button class="nav-item" data-page="settings">
+                    <span>⚙️</span> Settings
+                </button>
+
+                <div class="user-profile">
+                    <div class="user-avatar">SP</div>
+
+                    <div>
+                        <strong id="sidebarName">ankit singh</strong>
+                        <small id="sidebarEmail">singhankit32257@example.com</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </aside>
+
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <header class="topbar">
+
+                <div class="topbar-left">
+
+                    <button id="menuButton" class="menu-button">☰</button>
+
+                    <div class="breadcrumb">
+                        Workspace <span>/</span>
+                        <strong id="breadcrumb">Overview</strong>
+                    </div>
+
+                </div>
+
+                <div class="topbar-right">
+
+                    <div class="search-box">
+                        <span>⌕</span>
+                        <input id="globalSearch" type="search" placeholder="Search meetings...">
+                    </div>
+
+                    <button class="notification-button" id="notificationButton">♧</button>
+
+                    <div class="top-avatar">SP</div>
+
+                </div>
+
+            </header>
+
+            <section class="page-content" id="pageContent">
+                <!-- JavaScript renders pages here -->
+            </section>
+
+            <footer class="footer">
+                <span>© 2026 MeetMind AI. All rights reserved.</span>
+                <span class="online-status">● Workspace Active</span>
+            </footer>
+
+        </main>
+
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="modalContent"></div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast"></div>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
